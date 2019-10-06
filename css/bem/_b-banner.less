@@ -1,0 +1,78 @@
+.b-banner {
+    background-color: @mid-background-color;
+    padding: 420px @main-padding 0;
+    overflow: hidden;
+    
+    &--size {
+       height: 504px;
+    }
+    
+    &--position {
+        position: relative;  
+        margin-top: -124px;
+        z-index: -1;      
+    }
+
+    .mediaQuery(sm, {
+        height: 400px;
+        padding-top: 300px;
+    });
+    
+    &__container {
+        &--size {
+            min-width: @min-block-size;
+            max-width: @max-block-size;
+            height: inherit;
+        }
+
+        &--position {
+            margin: auto;
+            position: relative;
+        }
+
+        .mediaQuery(xl, {
+            min-width: 100%;
+            max-width: 100%;
+        });
+    }
+    
+    &__logo {
+        &--size {
+           width: 100%;
+        }
+
+        &--position {
+            margin-bottom: 25px;
+        }
+    }
+    
+    &__desc {
+        text-transform: uppercase;
+        font-family: BigJohn;
+        color: @main-text-color;
+        
+        &--size {
+            font-size: 40px;
+        }
+
+        .mediaQuery(sm, {
+            font-size: 20px;
+        });
+    }
+    
+    &__img {
+        display: block;
+        
+        height: 678px;
+
+        &--position {
+            position: absolute;
+            bottom: 0;
+            left: 38%;
+        }
+
+        .mediaQuery(sm, {
+            height: 500px;
+        });
+    }
+}
